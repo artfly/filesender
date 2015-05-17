@@ -29,7 +29,7 @@ public class Sender {
             switch (state) {
                 case SENDNAME:
                     b = filename.getBytes("UTF-8");
-                    length = filename.length();
+                    length = b.length;
                     System.out.println(b.length);
                     sendChunk();
                     b = new byte[BUFSIZE];
